@@ -1,0 +1,17 @@
+<nav class="menu" [class.open]="menuOpen">
+  <div class="menu-header">
+    <h2>Menú General</h2>
+    <button (click)="toggleMenu()">Cerrar</button>
+  </div>
+
+  <ul>
+    <li><a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">🏠 Home</a></li>
+    <li class="section-title">Información Personal</li>
+    <li><a href="#">📄 Ver info. básica</a></li>
+    <li><a href="#">✏️ Modificar datos personales</a></li>
+    <li class="section-title">Marcadores</li>
+    <li><a href="#">📍 Gestión de marcadores</a></li>
+    <li class="section-title">Reportes</li>
+    <li><a href="#">📊 Estadísticas de uso</a></li>
+  </ul>
+</nav>

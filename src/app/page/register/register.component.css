@@ -1,0 +1,96 @@
+section{
+    background-color: #f5f5f5;
+    display: grid;
+    grid-template-columns: 1.4fr 0.6fr;
+    img{
+        grid-column: 1;
+        max-height: 100%;
+        max-width: 70vw;
+    }
+    form{
+        grid-column: 2;
+
+        max-height: 100%;
+        max-width: 80%;
+        padding: 2%;
+        margin-top: 50px;
+    }
+
+}
+
+
+h3 {
+    font-size: 1.5em;
+    color: #D30C0C;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+hr {
+    width: 100%;
+    margin: 10px auto;
+    border: 1px solid #ddd;
+}
+
+input {
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 10px;
+    text-align: center;
+    background-color: #D30C0C;
+    color: white;
+}
+
+
+
+.forgot-password {
+    font-size: 0.9em;
+    color: #666;
+    cursor: pointer;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 1000px) {
+    section{
+        display: flex;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 10%;
+    }
+    section img {
+        display: none; /* Oculta la imagen en móviles */
+    }
+    
+    form {
+        height: 100%;
+        width: 100vw;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .input-group, .btn {
+        width: 100%;
+    }
+}
+
+

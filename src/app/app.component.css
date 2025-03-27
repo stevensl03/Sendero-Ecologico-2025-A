@@ -1,0 +1,59 @@
+/*/////////---Estilos del header ---///////////*/
+
+header {
+display: flex; 
+justify-content: space-between; 
+align-items: center; 
+padding: 15px 20px; 
+background-color: #D9D9D9; 
+color: rgb(0, 0, 0); 
+}
+
+header img {
+cursor: pointer; 
+height: 35px; 
+}
+
+.titulo {
+flex-grow: 1; 
+text-align: center; 
+}
+
+.titulo h3 {
+margin: 0;
+font-size: 1.5em;
+font-weight: bold; 
+}
+
+.titulo p {
+margin: 0;
+font-size: 1em; 
+}
+
+.login a {
+color: rgb(0, 0, 0); 
+text-decoration: none; 
+font-weight: bold; 
+}
+
+.login a.active {
+border-bottom: 2px solid #D30C0C; 
+}
+
+@media (max-width: 800px) {
+header {
+flex-direction: column; 
+align-items: flex-start; 
+}
+.titulo {
+text-align: left; 
+}
+}
+
+/*/////////---Estilos del main---///////////*/
+
+section{
+    display: grid;
+    grid-template-columns: 0.45fr 0.55fr;
+    
+}

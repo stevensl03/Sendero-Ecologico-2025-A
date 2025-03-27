@@ -1,0 +1,38 @@
+div {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    text-align: center;
+    color: #D30C0C;
+    margin-bottom: 20px;
+}
+
+div > div {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+div > div:hover {
+    transform: scale(1.02);
+}
+
+h4 {
+    margin: 0;
+    color: #333;
+}
+
+p {
+    color: #666;
+    margin-top: 5px;
+}

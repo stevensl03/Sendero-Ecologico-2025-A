@@ -1,0 +1,9 @@
+section{
+    margin: 0 auto;
+    margin-top: 20px;
+    max-width: 800px;
+}
+#map {
+    width: 100%;
+    height: 80vh; /* El mapa ocupará el 80% de la altura de la pantalla */
+  }
