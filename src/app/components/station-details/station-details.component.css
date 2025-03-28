@@ -1,9 +1,9 @@
-div {
+.container {
     font-family: Arial, sans-serif;
     padding: 20px;
     max-width: 500px;
     margin: auto;
-    background-color: #f8f9fa;
+    background-color: #F2EFE9;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -14,7 +14,7 @@ h3 {
     margin-bottom: 20px;
 }
 
-div > div {
+.item {
     background: white;
     padding: 15px;
     margin: 10px 0;
@@ -23,16 +23,139 @@ div > div {
     transition: transform 0.2s;
 }
 
-div > div:hover {
+.item:hover {
     transform: scale(1.02);
 }
 
 h4 {
     margin: 0;
-    color: #333;
+    color: #000000;
 }
 
 p {
-    color: #666;
+    color: #000000;
     margin-top: 5px;
+}
+
+
+
+
+/* Tarjeta de la estación */
+.headerCard {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 15px;
+
+    .titleCard{
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        h3{
+            margin: 0;
+            font-size: 24px;
+        }
+        /* Botón para cerrar */
+        button {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #c82333;
+        }
+
+
+    }
+
+}
+
+
+
+
+/* Línea separadora */
+.line1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+    .tituleSelect   {
+        font-size: 20px;
+        margin: 0;
+        font-weight: bold;
+        color: #000000;
+    }
+}
+
+
+
+.descripcionOp{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    p{
+        padding: 30px;
+        background-color: white;
+    }
+    
+}
+
+/* Opciones de clic */
+.clickOpcions {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 0px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    p{
+        margin: 0;
+        padding: 8px;
+    }
+}
+
+.clickOpcions:hover {
+    transform: scale(1.03);
+    background-color: #f1f1f1;
+}
+
+/* Imagen dentro de opciones */
+.clickOpcions img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Contenedor de opciones */
+.contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+
+
+
+@media (max-width: 1000px) {
+    .container{
+        display: block;
+    }
 }

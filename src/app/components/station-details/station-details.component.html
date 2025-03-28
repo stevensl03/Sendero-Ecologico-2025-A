@@ -1,15 +1,83 @@
-<div>
-    <h3>Estaciones Disponibles</h3>
-    <div>
-        <h4>Estacion 10</h4>
-        <p>Descripción</p>
+@if(isClick10 == false && isClick11 == false && isClick12 ==false ){
+    
+     <!--- Contenido de Estaciones Disponibles-->
+    <div class="container">
+        <h3>Estaciones Disponibles</h3>
+        <div (click)="isClick10 = true; selectedStation = 10" class="item">
+            <h4>Estación 10</h4>
+            <p>Descripción</p>
+        </div>
+        <div (click)="isClick11 = true; selectedStation = 11" class="item">
+            <h4>Estación 11</h4>
+            <p>Descripción</p>
+        </div>
+        <div (click)="isClick12 = true; selectedStation = 12" class="item">
+            <h4>Estación 12</h4>
+            <p>Descripción</p>
+        </div>
+    </div>    
+
+}
+<!--- Información de una determinada estación -->
+@if ((isClick10 || isClick11 || isClick12) && selectedStation != 0) {
+    <div class="container">
+            <!--- Contenido de encabezado-->
+        <div class="headerCard">
+            <div class="titleCard">
+                <h3>Estacion {{selectedStation}}</h3>
+                <button (click)="isClick10 = false; isClick11 = false;  isClick12 = false; selectedStation = 0">Cerrar</button>
+            </div>
+            @if (selectedStation === 10) {
+                <p>Información específica de la Estación 10.</p>
+            } @else if (selectedStation === 11) {
+                <p>Información específica de la Estación 11.</p>
+            } @else if (selectedStation === 12) {
+                <p>Información específica de la Estación 12.</p>
+            }
+        </div>
+
+        <!--- Contenido linea 1 "marcador"-->
+        <div class="line1">
+            <p class ="tituleSelect">Marcador seleccionado:</p>
+            <div class="clickOpcions">
+                <p>Punto Ecologico </p>
+                <img src="img/station-details_component/marker.webp" alt="Imagen de Marker">
+            </div>
+        </div>
+        <!--- Contenido linea 2 "Ver información y descripción"-->
+        <div class="descripcionOp">
+            <div class="clickOpcions">
+                <p>Ver Información</p>
+                <img src="img/station-details_component/verInformacion.webp" alt="Imagen de (¡)">
+            </div>
+            @if (selectedStation === 10) {
+                <p>Descripción detallada de la Estación 10.</p>
+            } @else if (selectedStation === 11) {
+                <p>Descripción detallada de la Estación 11.</p>
+            } @else if (selectedStation === 12) {
+                <p>Descripción detallada de la Estación 12.</p>
+            }
+        </div>
+        <!--- Contenido linea 3 "Demas botones""-->
+
+        <div class="contenido">
+            <div class="clickOpcions">
+                <p>Guardar favoritos</p>
+                <img src="img/station-details_component/guardarFavorito.webp" alt="Imagen de (¡)">
+            </div>
+            <div class="clickOpcions">
+                <p>Ver RA</p>
+                <img src="img/station-details_component/realidadAumentada.webp" alt="Imagen de (¡)">
+            </div>
+            <div class="clickOpcions">
+                <p>Ruta</p>
+                <img src="img/station-details_component/ruta.webp" alt="Imagen de (¡)">
+            </div>
+            <div class="clickOpcions">
+                <p>Multimedia</p>
+                <img src="img/station-details_component/multimedia.webp" alt="Imagen de (¡)">
+            </div>
+        </div>
     </div>
-    <div>
-        <h4>Estacion 11</h4>
-        <p>Descripción</p>
-    </div>
-    <div>
-        <h4>Estacion 12</h4>
-        <p>Descripción</p>
-    </div>
-</div>
+
+}

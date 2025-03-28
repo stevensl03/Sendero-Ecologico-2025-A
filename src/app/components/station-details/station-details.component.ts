@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './station-details.component.css'
 })
 export class StationDetailsComponent {
+  isClick10:boolean = false;
+  isClick11:boolean = false;
+  isClick12:boolean = false;
+  selectedStation:number = 0;
 
 }
