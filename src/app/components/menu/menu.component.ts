@@ -3,11 +3,10 @@ import { RouterOutlet, RouterLink, RouterLinkActive, Router} from '@angular/rout
 
 
 @Component({
-  selector: 'app-menu',
-  standalone: true,
-  imports: [RouterOutlet, RouterLink, RouterLinkActive],
-  templateUrl: './menu.component.html',
-  styleUrl: './menu.component.css'
+    selector: 'app-menu',
+    imports: [RouterOutlet, RouterLink, RouterLinkActive],
+    templateUrl: './menu.component.html',
+    styleUrl: './menu.component.css'
 })
 export class MenuComponent {
 

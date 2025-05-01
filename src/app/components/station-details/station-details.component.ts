@@ -2,11 +2,10 @@ import { Component } from '@angular/core';
 import { RouterOutlet, RouterLink, RouterLinkActive, Router} from '@angular/router';
 
 @Component({
-  selector: 'app-station-details',
-  standalone: true,
-  imports: [RouterOutlet, RouterLink, RouterLinkActive],
-  templateUrl: './station-details.component.html',
-  styleUrl: './station-details.component.css'
+    selector: 'app-station-details',
+    imports: [RouterOutlet, RouterLink, RouterLinkActive],
+    templateUrl: './station-details.component.html',
+    styleUrl: './station-details.component.css'
 })
 
 export class StationDetailsComponent {

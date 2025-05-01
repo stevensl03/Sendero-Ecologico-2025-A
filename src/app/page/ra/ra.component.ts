@@ -5,13 +5,11 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 @Component({
-  selector: 'app-ra',
-  standalone: true,
-  imports: [],
-  templateUrl: './ra.component.html',
-  styleUrl: './ra.component.css',
-  schemas: [CUSTOM_ELEMENTS_SCHEMA] 
-
+    selector: 'app-ra',
+    imports: [],
+    templateUrl: './ra.component.html',
+    styleUrl: './ra.component.css',
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 
 

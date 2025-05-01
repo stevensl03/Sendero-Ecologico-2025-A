@@ -6,11 +6,10 @@ import {StationDetailsComponent} from './components/station-details/station-deta
 
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, RouterLink, RouterLinkActive, MenuComponent, MapComponent, StationDetailsComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+    selector: 'app-root',
+    imports: [RouterOutlet, RouterLink, RouterLinkActive, MenuComponent, MapComponent, StationDetailsComponent],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css'
 })
 export class AppComponent {
   menuOpen = false;
