@@ -1,0 +1,28 @@
+<h1>Modelos para la estación {{ selectedStation }}</h1>
+@for (modelo of modelos; track modelo.id) {
+    @if (modelo.id_estacion === selectedStation) {
+      <div class="model-card">
+        <h2>{{ modelo.nombre_modelo }}</h2>
+  
+        @if (supportsAR) {
+            <model-viewer
+              src="{{ modelo.ruta_archivo }}"
+              ar
+              ar-modes="webxr scene-viewer quick-look"
+              camera-controls
+              touch-action="pan-y"
+              alt="Vista previa del modelo: {{ modelo.nombre_modelo }}"
+              poster="/assets/posters/{{ modelo.nombre_archivo.replace('.glb', '.jpg') }}"
+              shadow-intensity="1"
+              exposure="1">
+            </model-viewer>
+          } @else {
+            <div id="falso-ar-{{modelo.id}}" class="falso-ar-container"></div>
+          }
+          
+  
+        <p>Haz clic en RA para visualizarlo en tu entorno.</p>
+      </div>
+    }
+  }
+  

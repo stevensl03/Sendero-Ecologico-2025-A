@@ -1,0 +1,58 @@
+:host {
+    display: block;
+    padding: 1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+  }
+  
+  /* Título principal */
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+  
+  /* Grilla de tarjetas */
+  .model-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  /* Cada tarjeta individual */
+  .model-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .model-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  }
+  
+  .model-card h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #444;
+    text-align: center;
+  }
+  
+  model-viewer {
+    width: 100%;
+    height: 320px;
+    border-radius: 8px;
+    background-color: #e0e0e0;
+    margin-bottom: 0.5rem;
+  }
+  
+  .model-card p {
+    text-align: center;
+    color: #666;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+  }
+  
