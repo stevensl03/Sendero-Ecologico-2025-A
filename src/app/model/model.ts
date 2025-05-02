@@ -5,3 +5,10 @@ export interface Modelos3D {
   ruta_archivo: string;
   id_estacion: number;
 }
+
+export interface VideoEstacion {
+  id: number;
+  nombre: string;
+  embedUrl: string;
+  youtubeUrl: string;
+}

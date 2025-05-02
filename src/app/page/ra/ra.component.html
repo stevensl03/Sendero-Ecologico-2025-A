@@ -1,28 +1,48 @@
-<h1>Modelos para la estación {{ selectedStation }}</h1>
-@for (modelo of modelos; track modelo.id) {
-    @if (modelo.id_estacion === selectedStation) {
-      <div class="model-card">
-        <h2>{{ modelo.nombre_modelo }}</h2>
-  
-        @if (supportsAR) {
-            <model-viewer
-              src="{{ modelo.ruta_archivo }}"
-              ar
-              ar-modes="webxr scene-viewer quick-look"
-              camera-controls
-              touch-action="pan-y"
-              alt="Vista previa del modelo: {{ modelo.nombre_modelo }}"
-              poster="/assets/posters/{{ modelo.nombre_archivo.replace('.glb', '.jpg') }}"
-              shadow-intensity="1"
-              exposure="1">
-            </model-viewer>
-          } @else {
-            <div id="falso-ar-{{modelo.id}}" class="falso-ar-container"></div>
-          }
-          
-  
-        <p>Haz clic en RA para visualizarlo en tu entorno.</p>
+<h2 class="video-title">Video 360 de la estación {{ selectedStation }}</h2>
+
+<!-- Contenedor del video -->
+<div class="video-container">
+  @for (video of videos; track video.id) {
+    @if (video.id === selectedStation) {
+      <iframe
+        [src]="video.embedUrl | safeUrl"
+        frameborder="0"
+        allowfullscreen
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+      </iframe>
+
+      <div class="button-container">
+        <button (click)="openInYouTube(video.youtubeUrl)" class="btn-fullscreen">
+          Ver en modo 360° completo
+        </button>
       </div>
     }
   }
-  
+</div>
+
+<h2 class="model-title">Modelos para la estación {{ selectedStation }}</h2>
+
+<!-- Grid de modelos -->
+<div class="model-grid">
+  @for (modelo of modelos; track modelo.id) {
+    @if (modelo.id_estacion === selectedStation) {
+      <div class="model-card">
+        <h3 class="model-name">{{ modelo.nombre_modelo }}</h3>
+        <model-viewer
+        src="{{ modelo.ruta_archivo }}"
+        alt="Vista previa del modelo: {{ modelo.nombre_modelo }}"
+        poster="/assets/posters/{{ modelo.nombre_archivo.replace('.glb', '.jpg') }}"
+        camera-controls
+        touch-action="pan-y"
+        shadow-intensity="1"
+        exposure="1"
+        ar
+        ar-modes="webxr scene-viewer quick-look"
+        ar-scale="auto"
+        ar-placement="auto">
+      </model-viewer>
+      
+      </div>
+    }
+  }
+</div>

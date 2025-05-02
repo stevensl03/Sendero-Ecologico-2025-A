@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { RouterOutlet, RouterLink, RouterLinkActive, Router} from '@angular/router';
+import { RouterLinkActive, Router} from '@angular/router';
 
 @Component({
     selector: 'app-station-details',
-    imports: [RouterOutlet, RouterLink, RouterLinkActive],
+    imports: [ RouterLinkActive],
     templateUrl: './station-details.component.html',
     styleUrl: './station-details.component.css'
 })
